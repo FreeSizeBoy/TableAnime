@@ -1,0 +1,121 @@
+body {
+    font-family: 'Itim', sans-serif;
+    background-image: url('https://i.pinimg.com/564x/4f/12/73/4f1273907ed4efe523ed4928798b3430.jpg');
+    color: #ff69b4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-bottom: 2px solid #ff69b4; /* เส้นขอบด้านล่าง */
+}
+
+nav a {
+    margin: 0 15px;
+    color: #ff69b4;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* เพิ่มการเคลื่อนไหวเมื่อ hover */
+}
+
+nav a:hover {
+    color: #ff1493;
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 3em;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+main {
+    margin: 50px 0;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden; /* ซ่อนภาพที่อยู่นอกขอบเขต */
+}
+
+.slides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* ตั้งค่าความสูงของ slider */
+}
+
+.slide {
+    display: none; /* ซ่อนทุกสไลด์เริ่มต้น */
+    max-width: 100%;
+    width: auto; /* ตั้งค่าความกว้าง */
+    height: 100%; /* ตั้งค่าความสูงให้เต็ม */
+    object-fit: cover; /* ทำให้ภาพแสดงในกรอบที่กำหนด */
+    transition: transform 1s ease, opacity 1s ease; /* การเปลี่ยนแปลงการเคลื่อนที่และความโปร่งใส */
+    opacity: 0; /* เริ่มต้นด้วยความโปร่งใส */
+}
+
+.slide.active {
+    display: block;
+    opacity: 1; /* แสดงสไลด์ที่ active */
+    transform: scale(1.1); /* ขยายภาพที่แสดง */
+}
+
+.slide.outgoing {
+    opacity: 0; /* ทำให้ภาพที่ออกไปโปร่งใส */
+    transform: scale(0.9); /* ลดขนาดภาพที่ออกไป */
+}
+
+button {
+    background-color: #ff69b4; /* สีชมพูสด */
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* เพิ่มการเคลื่อนไหวเมื่อ hover */
+}
+
+button:hover {
+    background-color: #ff1493; /* สีชมพูเข้มเมื่อ hover */
+    transform: scale(1.05); /* ขยายขนาดเมื่อ hover */
+}
+
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.logo {
+    text-align: center; /* จัดกลางเนื้อหาภายใน div */
+    margin: 20px; /* ระยะห่างรอบๆ div */
+}
+
+.logo img {
+    width: 100px; /* ปรับขนาดให้เหมาะสม */
+    height: auto; /* ความสูงปรับตามอัตราส่วน */
+    border-radius: 8px; /* มุมโค้งมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงา */
+    transition: transform 0.2s; /* การเปลี่ยนแปลง */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* ขยายขนาดเมื่อเลื่อนเมาส์ */
+}
+
+.logo h3 {
+    margin: 10px 0; /* ระยะห่างระหว่างหัวข้อกับภาพ */
+    font-family: 'Itim', cursive; /* ใช้ฟอนต์ที่กำหนด */
+    color: #333; /* สีของข้อความ */
+}
